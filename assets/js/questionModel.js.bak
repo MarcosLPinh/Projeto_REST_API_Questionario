@@ -1,0 +1,8 @@
+class Question {
+	category;
+	difficulty;
+	correct_answer;
+	answers = [];
+	question;
+	type;
+}

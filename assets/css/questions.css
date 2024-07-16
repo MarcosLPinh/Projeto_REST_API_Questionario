@@ -1,0 +1,65 @@
+#questionAct {
+	display: flex;
+	flex-direction: column;
+	width: 70%;
+	margin: auto;
+}
+
+.questionNumberCount {
+	display: grid;
+	grid-template-columns: 1fr .2fr;
+}
+
+.count {
+	margin-left: 64vw;
+}
+
+.questionSpan {
+	font-size: 1.5rem;
+	margin-bottom: .7rem;
+}
+
+.alternative {
+	border: 1px solid;
+	padding: 1rem;
+	margin-bottom: .7rem;
+	cursor: pointer;
+}
+
+.btCheckAnswer {
+	width: 30%;
+	padding: .7rem;
+	margin: auto;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	border: 2px solid black;
+	border-right: 4px solid black;
+	border-bottom: 4px solid black;
+	cursor: pointer;
+}
+
+.rightQuestion,
+.rightQuestion > .labelAlternative {
+	border-color: #008000;
+	color: #008000;
+	background-color: #ECFFDC !important;
+}
+
+.wrongQuestion,
+.wrongQuestion > .labelAlternative {
+	border-color: red;
+	color: red;
+	background-color: antiquewhite !important;
+}
+
+h2,
+#questionAct,
+#rightAnswerContainer,
+.questionNumberCount,
+.questionSpan,
+.alternative,
+.alternative:not(.rightQuestion) > .labelAlternative,
+.alternative:not(.wrongQuestion) > .labelAlternative,
+.btCheckAnswer {
+	background-color: white;
+}

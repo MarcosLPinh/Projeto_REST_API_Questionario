@@ -1,0 +1,29 @@
+const questionList = document.getElementById('questionList')
+
+function convertQuestionToLi(question) {
+    return `
+        <li>
+            <div>
+                <span>#${question.question}</span>
+            </div>
+
+                <div>
+                    <ol>
+                        ${question.incorrect_answers.map((answer) => `<li>${answer}</li>`).join('')}
+                    </ol>
+
+                    <img src="${pokemon.photo}"
+                        alt="${pokemon.name}">
+                </div>
+        </li>
+    `
+}
+
+function loadPokemonItens(qtd) {
+    apiQuestions.getList(qtd).then((questions = []) => {
+        const newHtml = questions.map(convertPokemonToLi).join('')
+        questionList.innerHTML += newHtml
+    })
+}
+
+loadPokemonItens(offset, limit)
